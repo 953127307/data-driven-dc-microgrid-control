@@ -1,0 +1,175 @@
+{
+  "implementation_version": 5,
+  "reference_waveform_check_passed": true,
+  "exact_author_implementation_recovered": false,
+  "source_pdf": "A+Robust+Consensus+Algorithm+for+Current+Sharing_TCST_per+IRIS.pdf",
+  "source_pdf_sha256": "8860406b2c893193124cab5fa812d2d62bee5b6e4c05d300b0812fdd1e99aae2",
+  "source_url": "https://iris.unipv.it/retrieve/e1f104fd-0d3c-8c6e-e053-1005fe0aa0dd/A%20Robust%20Consensus%20Algorithm%20for%20Current%20Sharing_TCST_per%20IRIS.pdf",
+  "load_inference": {
+    "method": "integral capacitor KCL from published voltage, DGU current and line-current vector paths",
+    "fitted_start_s": 0.9999963805884747,
+    "fitted_duration_s": 0.02001523382000379,
+    "ramp_fit_rmse_A": [
+      0.006512698576558768,
+      0.004480189668949324,
+      0.0084255586441527,
+      0.003617487015992113
+    ],
+    "ideal_step_rmse_A": [
+      4.082962704102433,
+      2.857912036232367,
+      4.079222362286207,
+      2.0420947766236037
+    ],
+    "status": "inferred from published curves; not an explicitly reported source parameter"
+  },
+  "waveform_errors_0p99_to_1p05_s": {
+    "V": {
+      "max_abs_per_channel": [
+        0.0039350853231781,
+        0.00293698329437575,
+        0.0023024823799460137,
+        0.005287036102572529
+      ],
+      "rmse_per_channel": [
+        0.0014427228439288472,
+        0.0009489803232972783,
+        0.0010775597564578257,
+        0.0029695099809909265
+      ]
+    },
+    "I_t": {
+      "max_abs_per_channel": [
+        0.17907976677658866,
+        0.01390368829616051,
+        0.044458407825715085,
+        0.08576215695329026
+      ],
+      "rmse_per_channel": [
+        0.07022233260795413,
+        0.002134814276764197,
+        0.024535211331346507,
+        0.04230918533766359
+      ]
+    },
+    "I_line": {
+      "max_abs_per_channel": [
+        0.03459297629614699,
+        0.04459444259717493,
+        0.05717911439555934,
+        0.12853513654054272
+      ],
+      "rmse_per_channel": [
+        0.015583836904161532,
+        0.014874391344365133,
+        0.018661383840384155,
+        0.058490880962098236
+      ]
+    },
+    "u": {
+      "max_abs_per_channel": [
+        0.48547258532488513,
+        0.2729243496679601,
+        0.5086303154631082,
+        0.4501366552421473
+      ],
+      "rmse_per_channel": [
+        0.07992291697927831,
+        0.042876748972184325,
+        0.05858772247519949,
+        0.07734197396852208
+      ]
+    }
+  },
+  "waveform_max_abs_tolerances": {
+    "V": 0.01,
+    "I_t": 0.25,
+    "I_line": 0.2,
+    "u": 0.6
+  },
+  "step_halving_max_abs_differences": {
+    "V": 4.721548270936182e-05,
+    "I_t": 0.0006887054755466693,
+    "u": 0.008100000001604712
+  },
+  "ramp_metrics": {
+    "max_abs_weighted_voltage_error_V": 0.0029355286711449796,
+    "max_component_sharing_error_weighted_A": 0.45705723791667197,
+    "voltage_range_V": [
+      379.4849692298155,
+      380.2692769237248
+    ],
+    "input_range_V": [
+      382.291430769231,
+      389.61707692307783
+    ],
+    "late_voltage_rms_V": 2.1491577205024014e-10,
+    "late_sharing_vector_rms_weighted_A": 4.653134222495968e-06,
+    "joint_settling_delays_s": [
+      0.021579999999999933
+    ]
+  },
+  "ideal_step_metrics": {
+    "max_abs_weighted_voltage_error_V": 2.3357191642117074,
+    "max_component_sharing_error_weighted_A": 12.043861531836669,
+    "voltage_range_V": [
+      377.54911087884483,
+      380.2692769237248
+    ],
+    "input_range_V": [
+      378.81863076923105,
+      390.61667692307844
+    ],
+    "late_voltage_rms_V": 2.2037288961491285e-10,
+    "late_sharing_vector_rms_weighted_A": 4.579355978890416e-06,
+    "joint_settling_delays_s": [
+      0.014619999999999855
+    ]
+  },
+  "ideal_step_physical_bound": {
+    "delay_after_ideal_step_s": 0.001956,
+    "weighted_voltage_error_upper_bound_V": -1.9245125339542595,
+    "meaning": "any causal controller with the literal voltage-input rate bound must fall below this value"
+  },
+  "design": {
+    "implementation_version": 5,
+    "published_alpha": [
+      2400.0,
+      2400.0,
+      2400.0,
+      2400.0
+    ],
+    "published_communication_weights": [
+      10,
+      10,
+      10
+    ],
+    "supplemental_assumption_alpha_r": [
+      68939393.93939394,
+      61578947.36842105,
+      38666666.666666664,
+      51016042.780748665
+    ],
+    "supplemental_assumption_alpha_r_fraction": 0.25,
+    "supplemental_assumption_Lambda_physical": 1000000000000.0,
+    "time_scale_s": 0.001,
+    "primary_step_s": 2.5e-07,
+    "refined_step_s": 1.25e-07,
+    "boundary_layer": null,
+    "added_terminal_feedback": false,
+    "reference_load_transition_s_inferred_from_figures": 0.02,
+    "original_transient_replication": "see reference_scenario1_validation.json; unreported constants remain assumptions",
+    "source_sha256": "c3067ed590cf6ef50ec725b60f369fe1ae8059a5b519e9324a5c287ef52ee3b5"
+  },
+  "implementation_sha256": {
+    "run_comparison.py": "c3067ed590cf6ef50ec725b60f369fe1ae8059a5b519e9324a5c287ef52ee3b5",
+    "simulate_dc_microgrid.py": "d5701aebb2adeb643f2207eef4e5eb7fcca21a645d2f9924e3b64bcc6308630a",
+    "audit_reference_scenario1.py": "c65fdaff6901120eff9f24ea3cf05a55b8a9c8b99c09061894d08fd2ad963f52"
+  },
+  "limitations": [
+    "Lambda and alpha_r are supplemental assumptions; not recovered author values",
+    "Original high-frequency input ripple is not reproduced point for point",
+    "PDF vector curves have finite coordinate/export precision",
+    "20-ms transition is inferred from figures, not explicitly stated in the paper"
+  ]
+}

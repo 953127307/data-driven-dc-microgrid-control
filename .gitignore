@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+figures/
+data/table_iv.csv
+data/comparison_tcst_metrics*.json
+data/reference_figure_curves/
+data/reference_scenario1_*.npz
